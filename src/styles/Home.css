@@ -1,0 +1,22 @@
+.home-body {
+    min-height: 100vh;
+}
+
+.home-header {
+    display: flex;
+    background-color: #5950ff;
+    padding: 20px;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
+.login-button {
+    cursor: pointer;
+    margin-left: auto;
+    width: 120px;
+    background-color: #eeeeee;
+    font-size: 20px;
+}

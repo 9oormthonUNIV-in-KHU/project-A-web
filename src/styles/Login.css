@@ -1,0 +1,14 @@
+.login-body {
+    min-height: 100vh;
+}
+
+.login-header {
+    display: flex;
+    background-color: #5950ff;
+    padding: 20px;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}

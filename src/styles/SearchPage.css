@@ -27,6 +27,7 @@ body {
 .search-logo-img {
   height: 32px;
   width: auto;
+  cursor: pointer;
 }
 
 .search-title {

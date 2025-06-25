@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/SearchPage.css';
 import logo from '../assets/dongarieum.svg';
 import searchIcon from '../assets/dotbogi.svg';
@@ -34,6 +35,7 @@ const items = [
 function SearchPage() {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const nav = useNavigate();
 
   const filteredItems = items.filter(
     item =>
@@ -43,10 +45,14 @@ function SearchPage() {
 
   const isEmpty = query.trim() === '';
 
+  const onClickLogo = () => {
+    nav("/");
+  }
+
   return (
     <div className="search-bg">
       <header className="search-header">
-        <img src={logo} alt="동아리음 로고" className="search-logo-img" />
+        <img src={logo} alt="동아리음 로고" className="search-logo-img" onClick={onClickLogo}/>
       </header>
       <div className="search-top-section">
         <h2 className="search-title">내 동아리를 찾아볼까요?</h2>
