@@ -13,10 +13,10 @@ export default function Home() {
     nav("/")
   }
   return (
-    <div className="home-body">
+    <div className="home-bg">
       <div className="home-header">
-        <img src={logo} alt="동아리음 로고" className="logo" onClick={onClickLogo}/>
-        <button className="login-button" onClick={onClickLogin}>로그인</button>
+        <img src={logo} alt="동아리음 로고" className="home-logo" onClick={onClickLogo}/>
+        <button className="home-login-button" onClick={onClickLogin}>로그인</button>
       </div>
     </div>
   )

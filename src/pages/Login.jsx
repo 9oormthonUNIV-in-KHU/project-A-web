@@ -10,9 +10,9 @@ export default function Login() {
     }
 
     return (
-        <div className="login-body">
+        <div className="login-bg">
             <div className="login-header">
-                <img src={logo} alt="동아리음 로고" onClick={onClickLogo} className="logo"/>
+                <img src={logo} alt="동아리음 로고" onClick={onClickLogo} className="login-logo"/>
             </div>
         </div>
     )
