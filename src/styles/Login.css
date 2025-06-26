@@ -1,0 +1,15 @@
+.login-bg {
+    min-height: 100vh;
+}
+
+.login-header {
+    height: 290px;
+    display: flex;
+    background-color: #5950ff;
+}
+
+.login-logo {
+    height: 32px;
+    margin: 38px 0 0 30px;
+    cursor: pointer;
+}

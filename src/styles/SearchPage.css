@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.search-bg {
+  min-height: 100vh;
+  background: #5950ff;
+}
+
+.search-top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  padding-top: 38px;
+  padding-left: 30px;
+}
+
+.search-logo-img {
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* 내 동아리를 찾아볼까요? */
+.search-title {
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 62px;
+  margin-bottom: 16px;
+}
+
+/* 검색 박스 */
+.search-input-wrapper {
+  background: #f6f6f6;
+  border: solid 1px;
+  border-color: #dddddd;
+  border-radius: 12px;
+  width: 690px;
+  max-width: 90vw;
+  display: flex;
+  align-items: center;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  height: 64px;
+}
+
+/* 검색어를 입력하세요 */
+.search-input {
+  border: none;
+  outline: none;
+  font-family: 'Pretendard', sans-serif;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  background: transparent;
+  line-height: 30px;
+}
+
+/* 검색 결과 */
+.search-result-area {
+  width: 100vw;
+  background: #fff;
+  min-height: calc(100vh - 220px);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 동아리 이름을 검색해보세요 + 찾는 동아리가 없어요 */
+.search-empty {
+  color: #999999;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 56px;
+  font-weight: 400;
+}
+
+/* 목록 리스트 */
+.search-list {
+  width: 690px;
+  max-width: 95vw;
+  margin: 12px 0 0 0;
+  padding-left: 0px;
+  list-style: none;
+}
+
+/* 개별 목록 */
+.search-list-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* 동아리 이미지 */
+.search-item-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  background: #fafafa;
+  border: 1px solid rgba(#eee,0.1);
+}
+
+.search-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3px;
+}
+
+.search-item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222;
+}
+
+.search-item-desc {
+  color: #999999;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* 참여 버튼 */
+.search-item-join {
+  background: #e9e8ff;
+  color: #5950ff;
+  height: 37px;
+  width: 65px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  cursor: pointer;
+  margin-left: 32px;
+}
+.search-item-join:hover {
+  background: #e6e1ff;
+}
+
+/* 새로운 동아리를 만들래요! */
+.search-create-button{
+  margin: 44px 0 0 0;
+  color: #5950FF;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
