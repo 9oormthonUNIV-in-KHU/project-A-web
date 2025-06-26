@@ -1,0 +1,163 @@
+.calendar-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 36px 40px 36px;
+  box-shadow: 0 2px 8px rgba(30, 32, 38, 0.04);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.calendar-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 16px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.today-btn, .team-btn {
+  margin-left: auto;
+  background: #f2f4ff;
+  border: none;
+  color: #5f6dfa;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 0.13s;
+}
+
+.team-btn {
+  background: #f6f6fa;
+  color: #666;
+}
+
+/* 달력 테이블 스타일 */
+.calendar-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+  text-align: center;
+}
+
+.weekdays-header {
+  background-color: #f6f6fa;
+}
+
+.weekdays-header th {
+  font-weight: 500;
+  padding: 12px 0;
+  color: #666;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: calc(100% / 7);
+  vertical-align: top;
+}
+
+.calendar-table th.sun,
+.calendar-table td.sun {
+  color: #f28b8b;
+}
+
+.calendar-table th.sat,
+.calendar-table td.sat {
+  color: #6f8df6;
+}
+
+.calendar-table td {
+  height: 120px;
+  border: 1px solid #eee;
+  transition: background 0.13s;
+}
+
+.calendar-table td.fri {
+  color: #e17cad;
+}
+
+/* 날짜 컨텐츠 스타일 */
+.date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding: 8px 4px;
+  position: relative;
+}
+
+.date-number {
+  margin-bottom: 4px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+/* 오늘 날짜 스타일 */
+.calendar-table td.today .date-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+/* 휴일 스타일 */
+.calendar-table td.holiday .date-number {
+  color: #f28b8b;
+}
+
+.holiday-label {
+  font-size: 10px;
+  color: #f28b8b;
+  margin: 4px 0;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* 다음 달 스타일 */
+.calendar-table td.next-month {
+  color: #e0e0e0;
+  background: #fafafa;
+}
+
+/* 일정 스타일 */
+.schedule-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 70px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.schedule-item {
+  font-size: 11px;
+  color: #5f6dfa;
+  background: #f2f4ff;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
