@@ -4,7 +4,6 @@ import SearchPage from './pages/SearchPage';
 import Login from './pages/Login';
 import CreateClub from './pages/CreateClub';
 import JoinSuccess from './pages/JoinSuccess';
-import Modal from './components/modal/Modal';
 
 export default function AppRouter() {
   return (
