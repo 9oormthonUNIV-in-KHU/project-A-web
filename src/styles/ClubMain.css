@@ -1,0 +1,141 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+/* 전체 컨테이너 */
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: #f6f6f6;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    background-color: white;
+    width: 240;
+    height: 810;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 56px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0px 10px 0px #0000000D;
+}
+
+.logo-section {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.logo {
+  width: 61;
+  height: 26;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background: #f2f2f2;
+  border: 1px solid #0000001A
+}
+
+.user-name {
+    width: 77;
+    height: 21; 
+
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1%;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: auto;
+}
+
+.menu > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+    width: 200;
+    height: 40;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1%;
+
+
+}
+
+.menu > button:hover{
+    background: #f3f6ff;
+}
+/* 탭 활성화 상태 강조 */
+.menu-item.active {
+  background: #E9E8FF;
+  color: #5950ff;
+  position: relative;
+}
+
+.record-btn {
+  width: 200px;
+  height: 40px;
+  padding: 8px 32px;
+  gap: 10px;
+  background: #5950ff;
+  color: #fff;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.record-btn:hover {
+  background: #5f6dfa;
+}
+
+/* 메인 컨텐츠 스타일 */
+.main-content {
+  flex: 1;
+}
+
+.main-header h2 {
+    width: 70;
+    height: 30; 
+
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  margin: 20px 30px ;
+  text-align: left;
+}

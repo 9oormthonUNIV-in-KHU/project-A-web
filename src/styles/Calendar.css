@@ -1,0 +1,398 @@
+.calendar-section {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(30, 32, 38, 0.04);
+  margin: 10px;
+}
+
+.calendar-header {
+    height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+  justify-content: space-between; /* 추가 */
+}
+
+.calendar-title {
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.today-btn, .team-btn {
+    width: 120px;
+    height: 36px;
+  margin: 20px 18px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  font-family: Pretendard;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  padding: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 0.13s;
+}
+
+.team-btn {
+  background: #f6f6fa;
+  color: #666;
+}
+
+/* 달력 테이블 스타일 */
+.calendar-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+  text-align: center;
+}
+
+.weekdays-header {
+  background-color: #f6f6fa;
+}
+
+.weekdays-header th {
+  font-weight: 500;
+  padding: 12px 0;
+  color: #666;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: calc(100% / 7);
+  vertical-align: top;
+}
+
+.calendar-table th.sun,
+.calendar-table td.sun {
+  color: #f28b8b;
+}
+
+.calendar-table th.sat,
+.calendar-table td.sat {
+  color: #6f8df6;
+}
+
+.calendar-table td {
+height: 115px;  border: 1px solid #eee;
+  transition: background 0.13s;
+}
+
+.calendar-table td.fri {
+  color: #e17cad;
+}
+
+/* 날짜 컨텐츠 스타일 */
+.date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding: 8px 4px;
+  position: relative;
+}
+
+.date-number {
+  margin-bottom: 4px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+/* 오늘 날짜 스타일 */
+.calendar-table td.today .date-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+/* 휴일 스타일 */
+.calendar-table td.holiday .date-number {
+  color: #f28b8b;
+}
+
+.holiday-label {
+  font-size: 10px;
+  color: #f28b8b;
+  margin: 4px 0;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* 다음 달 스타일 */
+.calendar-table td.next-month {
+  color: #e0e0e0;
+  background: #fafafa;
+}
+
+/* 일정 스타일 */
+.schedule-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 70px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+/* Calendar.css */
+
+.schedule-item.all {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.schedule-item.plan {
+  background: #ffd6d6;
+  color: #b71c1c;
+}
+
+.schedule-item.design {
+  background: #d6eaff;
+  color: #1565c0;
+}
+
+.schedule-item.frontend {
+  background: #d6ffd6;
+  color: #1b5e20;
+}
+
+.schedule-item.backend {
+  background: #fff8d6;
+  color: #ff8f00;
+}
+
+/* 예쁘게 보이도록 약간의 여백, 둥근 테두리 추가 */
+.schedule-item {
+    width: 90%;
+  margin: 2px 0;
+  padding: 4px 0;
+  border-radius: 8px;
+  font-size: 12px;
+  display: inline-block;
+  font-family: Pretendard;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0%;
+
+}
+
+.modal-overlay {
+  position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center; z-index: 1000;
+}
+.month-year-modal {
+  background: #fff; border-radius: 18px; padding: 24px 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  position: relative; z-index: 1001; min-width: 300px;
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
+}
+.modal-arrow {
+  background: none; border: none; font-size: 24px; cursor: pointer;
+}
+.modal-year {
+  font-size: 22px; font-weight: bold;
+}
+.modal-months {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.modal-month {
+  background: none; border: none; font-size: 16px; padding: 10px 0; border-radius: 8px; cursor: pointer;
+  transition: background 0.15s;
+}
+.modal-month.selected {
+  background: #222; color: #fff; font-weight: bold;
+}
+
+/* 모달 배경 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+/* 팀 선택 모달 */
+.team-modal {
+  position: fixed;
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 1001;
+  width: 360px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.team-modal-header {
+  display: flex;
+  align-items: center;
+}
+
+.team-modal-title {
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.team-modal-desc {
+    margin-left: 8px;
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #999999;
+}
+.modal-close-btn {
+    margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-team-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px auto;
+}
+
+.modal-team-btn {
+    margin: 2px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s;
+   width: 69;
+    height: 32px;
+    border-radius: 8px;
+    border-width: 1px;
+    padding-right: 16px;
+    padding-left: 16px;
+
+}
+
+.modal-team-btn:hover {
+  background: #f0f0f0;
+}
+
+.modal-team-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* 선택된 버튼 색상 */
+
+.selected-gray { background: #e0e0e0; border-color: #b0b0b0; }
+.selected-blue { background: #d6eaff; border-color: #8cc2ff; }
+.selected-green { background: #d6ffd6; border-color: #a0e9a0; }
+.selected-orange { background: #fff8d6; border-color: #ffe066; }
+.selected-purple { background: #eed6ff; border-color: #d9a0ff; }
+
+.team-modal-footer {
+
+  display: flex;
+  justify-content: right;
+}
+
+.edit-btn {
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+
+  background: none;
+  border: none;
+  color: #999999;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.selected-teams {
+  display: inline-flex;
+  gap: 8px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.selected-team-badge {
+  display: inline-block;
+  padding: 4px 13px;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #f3f3f3;
+  color: #555;
+  border: 1.5px solid #ddd;
+  font-weight: 500;
+}
+.selected-team-badge.plan { background: #e6f0ff; color: #3a7afe; border-color: #3a7afe;}
+.selected-team-badge.design { background: #e6ffe6; color: #2ecc40; border-color: #2ecc40;}
+.selected-team-badge.frontend { background: #fff4e6; color: #ff9800; border-color: #ff9800;}
+.selected-team-badge.backend { background: #f4e6ff; color: #a259ff; border-color: #a259ff;}
+.selected-team-badge.all { background: #f3f3f3; color: #555; border-color: #bbb;}
+
+.calendar-container {
+  position: relative;
+}
+
+.clickable-date {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-date:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.clickable-date:hover .date-content {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
