@@ -1,7 +1,7 @@
 import Univ from '../assets/gurumton.svg';
 
 import '../styles/JoinSuccess.css';
-import Modal from '../components/modal/Modal';
+import Modal from '../components/Modal';
 
 import { useState } from 'react';
 

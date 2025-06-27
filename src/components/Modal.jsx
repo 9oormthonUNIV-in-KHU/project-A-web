@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import CloseBtn from '../../assets/close.svg';
-import Univ from '../../assets/gurumton.svg';
+import CloseBtn from '../assets/close.svg';
+import Univ from '../assets/gurumton.svg';
 
-import '../../styles/modal/modal.css';
+import '../styles/modal.css';
 
 export default function Modal({ isOpen, onClose }) {
   const [verificationCode, setVerificationCode] = useState(Array(6).fill(''));
