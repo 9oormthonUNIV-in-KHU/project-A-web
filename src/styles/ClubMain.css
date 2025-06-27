@@ -5,49 +5,58 @@
   display: flex;
   min-height: 100vh;
   font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  background: #fafbfc;
+  background: #f6f6f6;
 }
 
 /* 사이드바 스타일 */
 .sidebar {
-  width: 260px;
-  background: #fff;
-  border-right: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 0 24px 0;
-  box-sizing: border-box;
-  box-shadow: 4px 0 12px 0 rgba(31, 41, 55, 0.06);
+    background-color: white;
+    width: 240;
+    height: 810;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 56px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0px 10px 0px #0000000D;
 }
 
 .logo-section {
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .logo {
-  width: 120px;
-  height: auto;
+  width: 61;
+  height: 26;
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 .profile-img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   margin-right: 12px;
   background: #f2f2f2;
+  border: 1px solid #0000001A
 }
 
 .user-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+    width: 77;
+    height: 21; 
+
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1%;
 }
 
 .menu {
@@ -62,63 +71,71 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 100%;
-  padding: 12px 24px;
   background: none;
   border: none;
-  font-size: 16px;
-  color: #666;
+  color: #999;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.15s;
+    width: 200;
+    height: 40;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1%;
+
+
+}
+
+.menu > button:hover{
+    background: #f3f6ff;
 }
 /* 탭 활성화 상태 강조 */
 .menu-item.active {
-  background: #f1f3fa;
-  color: #5f6dfa;
+  background: #E9E8FF;
+  color: #5950ff;
   position: relative;
-}
-
-.menu-item.active::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 24px;
-  background: #5f6dfa;
-  border-radius: 2px;
 }
 
 .record-btn {
   width: 200px;
-  padding: 14px 0;
-  background: #5f6dfa;
+  height: 40px;
+  padding: 8px 32px;
+  gap: 10px;
+  background: #5950ff;
   color: #fff;
-  font-size: 17px;
-  font-weight: 600;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
   border: none;
-  border-radius: 12px;
-  margin-top: 40px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s;
 }
 
 .record-btn:hover {
-  background: #4355b2;
+  background: #5f6dfa;
 }
 
 /* 메인 컨텐츠 스타일 */
 .main-content {
   flex: 1;
-  padding: 48px 60px 0 60px;
 }
 
 .main-header h2 {
+    width: 70;
+    height: 30; 
+
   font-size: 32px;
   font-weight: 600;
   line-height: 48px;
-  margin: 0 0 24px 0;
+  margin: 20px 30px ;
   text-align: left;
 }

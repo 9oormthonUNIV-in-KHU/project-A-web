@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 import "../styles/ClubMain.css";
 import logo from "../assets/violetdong.svg"
 import month from "../assets/month.svg"
@@ -10,35 +9,12 @@ import Calendar from "../components/Calendar";
 import Year from "../components/Year";
 import Members from "../components/Members";
 import Account from "../components/Account";
+import univ from "../assets/gurumton.svg"
 
 function ClubMain() {
-  const { id: clubId } = useParams();
 
   // 현재 활성화된 탭 상태 관리
   const [activeTab, setActiveTab] = useState("monthly");
-  const [clubInfo, setClubInfo] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchClubInfo = async () => {
-      try {
-        const res = await fetch(`/clubs/${clubId}`);
-        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-        
-        const data = await res.json();
-        if (!data.name) throw new Error("클럽 데이터 없음");
-        
-        setClubInfo(data);
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchClubInfo();
-  }, [clubId]);
   
   // 탭 변경 핸들러
   const handleTabChange = (tabName) => {
@@ -70,12 +46,12 @@ function ClubMain() {
         </div>
         <div className="user-info">
             <img
-                src={clubInfo?.image_url || logo}
+                src={univ}
                 alt="프로필"
                 className="profile-img"
             />
             <span className="user-name">
-                {clubInfo?.name || "로딩 중..."}
+                구름톤 유니브
             </span>
             </div>
         <nav className="menu">

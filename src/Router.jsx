@@ -14,7 +14,7 @@ export default function AppRouter() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create-club" element={<CreateClub />} />
-        <Route path="/club/:id" element={<ClubMain />} />
+        <Route path="/club" element={<ClubMain />} />
         <Route path="/join-success" element={<JoinSuccess />} />
       </Routes>
     </BrowserRouter>
