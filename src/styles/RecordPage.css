@@ -1,0 +1,242 @@
+.record-background {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  padding-left: 240px;
+}
+
+.record-main {
+  margin: auto;
+  width: 1200px;
+}
+
+.record-head {
+  width: 927px;
+  padding: 26px 138px 8px 135px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.record-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.next-button {
+  box-sizing: border-box;
+  width: 79px;
+  height: 36px;
+  padding: auto;
+  border-radius: 8px;
+  background-color: #ddd;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #999;
+}
+
+.record-title-input {
+  width: 879px;
+  height: 78px;
+  padding: 0px 24px;
+  border-radius: 16px 16px 0px 0px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.record-title-input > input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000;
+  box-sizing: border-box;
+  display: block;
+}
+.record-title-input > input::placeholder {
+  color: #606060;
+}
+.record-title-input > input:focus {
+  outline: none;
+}
+
+.filled-input {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.team-button {
+  width: 78px;
+  height: 36px;
+  padding: auto;
+  border-radius: 8px;
+  background-color: #e9e8ff;
+  border: none;
+  margin: 21px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #5950ff;
+  cursor: pointer;
+}
+
+.date {
+  width: 879px;
+  height: 78px;
+  padding: 0px 24px;
+  border-radius: 0px 0px 16px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-top: none;
+
+  display: flex;
+  align-items: center;
+  > div {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #000;
+  }
+}
+
+.record-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 135px;
+}
+
+.record-select {
+  width: 927px;
+  height: 501px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.select-title {
+  margin-left: 25px;
+  margin-top: 26px;
+
+  > h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+
+.select-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 28px 68px;
+}
+
+.select-button {
+  width: 250px;
+  height: 138px;
+  border-radius: 14px;
+  border: 1.719px solid #ddd;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  > div {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    transition: color 0.2s, background-color 0.2s;
+  }
+}
+
+.select-button.active {
+  background-color: rgba(89, 80, 255, 0.2);
+  border: 1px solid #5950ff;
+}
+
+.select-button.active > div {
+  color: #5950ff;
+}
+
+.select-button.inactive > div {
+  color: #ddd;
+}
+
+.able {
+  color: #5950ff;
+  background-color: rgba(89, 80, 255, 0.2);
+  cursor: pointer;
+}
+
+.team-chip-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff895b;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 9px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.team-chip-label {
+  flex-shrink: 0;
+}
+
+.chip-디자인 {
+  background-color: #ff895b;
+}
+.chip-기획 {
+  background-color: #774cc7;
+}
+.chip-프론트엔드 {
+  background-color: #27accd;
+}
+.chip-백엔드 {
+  background-color: #1baa52;
+}
+.chip-전체 {
+  background-color: #f55a5a;
+}
+
+.change-btn {
+  display: flex;
+  width: 110px;
+  align-items: center;
+  gap: 6px;
+  margin-right: 5px;
+}
+
+.change-team {
+  width: 180px;
+  border: none;
+  background-color: white;
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
