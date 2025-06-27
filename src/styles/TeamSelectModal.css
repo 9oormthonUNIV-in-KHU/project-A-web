@@ -1,0 +1,101 @@
+.team-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.team-modal {
+  position: absolute;
+  top: 78px;
+  right: 0px;
+  z-index: 100;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.team-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-select-title {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.team-select-title h1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.team-select-title p {
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.team-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.team-option {
+  height: 32px;
+  padding: 0px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f6f6f6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #999;
+}
+
+.team-option.selected {
+  color: white;
+}
+
+.team-option.selected.team-전체 {
+  background-color: #f55a5a;
+}
+.team-option.selected.team-기획 {
+  background-color: #774cc7;
+}
+.team-option.selected.team-디자인 {
+  background-color: #ff895b;
+}
+.team-option.selected.team-프론트엔드 {
+  background-color: #27accd;
+}
+.team-option.selected.team-백엔드 {
+  background-color: #1baa52;
+}
+
+.team-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.team-edit {
+  margin-top: 10px;
+  text-align: right;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
