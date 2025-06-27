@@ -27,7 +27,7 @@ export default function Modal({ isOpen, onClose }) {
   const isActive = verificationCode.every((digit) => digit !== '');
 
   const joinButton = () => {
-    navigate('/search');
+    navigate('/join-success');
   };
   if (!isOpen) return null;
 
