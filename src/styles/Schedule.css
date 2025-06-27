@@ -1,0 +1,191 @@
+.schedule-background {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  padding-left: 240px;
+}
+
+.schedule-main {
+  margin: auto;
+  width: 1200px;
+}
+
+.schedule-head {
+  width: 927px;
+  padding: 26px 138px 8px 135px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.schedule-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.schedule-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 135px;
+}
+
+.save-button {
+  box-sizing: border-box;
+  width: 60px;
+  height: 36px;
+  padding: auto;
+  border-radius: 8px;
+  background-color: rgba(89, 80, 255, 0.2);
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #5950ff;
+  cursor: pointer;
+}
+
+.schedule-title-input {
+  width: 879px;
+  height: 78px;
+  padding: 0px 24px;
+  border-radius: 16px 16px 0px 0px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.schedule-title-input > input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000;
+  box-sizing: border-box;
+  display: block;
+}
+.schedule-title-input > input::placeholder {
+  color: #606060;
+}
+
+.team-button {
+  width: 78px;
+  height: 36px;
+  padding: auto;
+  border-radius: 8px;
+  background-color: #e9e8ff;
+  border: none;
+  margin: 21px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #5950ff;
+  cursor: pointer;
+}
+
+.date {
+  width: 879px;
+  height: 78px;
+  padding: 0px 24px;
+  border-radius: 0px 0px 16px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-top: none;
+
+  display: flex;
+  align-items: center;
+  > div {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #000;
+  }
+}
+
+.record-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 135px;
+}
+
+.schedule-memo {
+  width: 927px;
+  height: 501px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.shedule-title {
+  margin-left: 25px;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+
+  > h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+
+.team-design-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff895b;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.schedule-team-select {
+  display: flex;
+  gap: 5px;
+}
+
+.team-change {
+  width: 50px;
+  border: none;
+  background-color: white;
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.memo {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.14px;
+  color: #5950ff;
+}
+
+.memo-input {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 6px 0px;
+}
