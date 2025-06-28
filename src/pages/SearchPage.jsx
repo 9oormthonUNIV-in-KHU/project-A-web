@@ -15,6 +15,7 @@ function SearchPage() {
   const [hasSearched, setHasSearched] = useState(false); // 검색 실행 여부 추적
   const nav = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedClub, setSelectedClub] = useState(null);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -98,7 +99,10 @@ function SearchPage() {
                 </div>
                 <button
                   className="search-item-join"
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => {
+                    setSelectedClub(club);
+                    setIsModalOpen(true);
+                  }}
                 >
                   참여
                 </button>
@@ -110,7 +114,11 @@ function SearchPage() {
           새로운 동아리를 만들래요!
         </button>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        club={selectedClub}
+      />
     </div>
   );
 }

@@ -114,7 +114,7 @@ body {
   object-fit: cover;
   margin-right: 12px;
   background: #fafafa;
-  border: 1px solid rgba(#eee,0.1);
+  border: 1px solid rgba(#eee, 0.1);
 }
 
 .search-item-info {
@@ -157,9 +157,9 @@ body {
 }
 
 /* 새로운 동아리를 만들래요! */
-.search-create-button{
+.search-create-button {
   margin: 44px 0 0 0;
-  color: #5950FF;
+  color: #5950ff;
   background: none;
   border: none;
   text-decoration: underline;
@@ -167,5 +167,11 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.search-input-icon-btn {
+  border: none;
+  background-color: #f6f6f6;
   cursor: pointer;
 }

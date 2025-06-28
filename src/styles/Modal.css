@@ -90,7 +90,6 @@ p {
 }
 
 .codeWrapper {
-  margin-bottom: 63px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -128,6 +127,7 @@ p {
 }
 
 .clickBtn {
+  margin-top: 63px;
   width: 100%;
   max-width: 610px;
   padding: 12px 42px;
@@ -148,4 +148,25 @@ p {
 .inactive {
   background-color: #dddddd;
   color: #999;
+}
+
+.error-message {
+  color: #5950ff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-top: 12px;
+}
+
+.error-btn {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 610px;
+  padding: 12px 42px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
 }
