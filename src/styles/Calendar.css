@@ -3,6 +3,7 @@
   padding: 20px;
   box-shadow: 0 2px 8px rgba(30, 32, 38, 0.04);
   margin: 10px;
+  border-radius: 8px;
 }
 
 .calendar-header {
@@ -339,7 +340,6 @@ height: 115px;  border: 1px solid #eee;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0%;
-    text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 0%;
 
