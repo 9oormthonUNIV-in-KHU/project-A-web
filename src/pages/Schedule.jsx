@@ -1,7 +1,7 @@
 import '../styles/RecordPage.css';
 import { useState } from 'react';
 import Calendar from '../components/Calendar';
-export default function Schedule() {
+export default function Schedule({ title }) {
   const [showCalendar, setShowCalendar] = useState(false);
 
   if (showCalendar) return <Calendar />;
@@ -24,12 +24,7 @@ export default function Schedule() {
         <div className="schedule-content">
           <div>
             <div className="schedule-title-input">
-              <input
-                type="text"
-                placeholder="제목을 입력하세요."
-                value="디자인 브랜딩 회의"
-                readOnly
-              />
+              <div className="schedule-title-api">{title}</div>
               <div className="schedule-team-select">
                 <button className="team-design-button">디자인</button>
                 <button className="team-change">팀 변경</button>

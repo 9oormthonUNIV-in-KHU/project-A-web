@@ -71,9 +71,6 @@
   box-sizing: border-box;
   display: block;
 }
-.schedule-title-input > input::placeholder {
-  color: #606060;
-}
 
 .team-button {
   width: 78px;
@@ -187,4 +184,11 @@
   font-size: 16px;
   margin-top: 8px;
   padding: 6px 0px;
+}
+
+.schedule-title-api {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
 }

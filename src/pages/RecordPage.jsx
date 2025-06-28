@@ -19,7 +19,7 @@ export default function RecordPage() {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [showSchedule, setShowSchedule] = useState(false);
 
-  if (showSchedule) return <Schedule />;
+  if (showSchedule) return <Schedule title={title} />;
 
   return (
     <div className="record-background">
