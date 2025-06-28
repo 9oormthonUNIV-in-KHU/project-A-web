@@ -18,6 +18,8 @@
 .titleWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 4px;
   margin-bottom: 46px;
 

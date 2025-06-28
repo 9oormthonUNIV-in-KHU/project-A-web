@@ -58,7 +58,7 @@ export default function Modal({ isOpen, onClose, club }) {
         password: password,
       });
 
-      navigate('/join-success');
+      navigate(`/join-success/${club.id}`);
     } catch (error) {
       const msg = error.response?.data.message || '⚠️ 입장코드가 달라요!';
       setErrorMessage(msg);
