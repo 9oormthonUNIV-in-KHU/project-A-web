@@ -15,7 +15,7 @@ export default function JoinSuccess() {
       <button
         className="button"
         onClick={() => {
-          navigate('/calendar');
+          navigate('/club');
         }}
       >
         내 동아리 보러가기

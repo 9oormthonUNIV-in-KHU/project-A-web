@@ -10,6 +10,7 @@ import Year from "../components/Year";
 import Members from "../components/Members";
 import Account from "../components/Account";
 import univ from "../assets/gurumton.svg"
+import RecordPage from "./RecordPage";
 
 function ClubMain() {
 
@@ -32,6 +33,8 @@ function ClubMain() {
         return <Members />;
       case "accounting":
         return <Account />;
+      case "record":
+        return <RecordPage />;
       default:
         return <Calendar />;
     }
@@ -85,7 +88,12 @@ function ClubMain() {
             회계관리
           </button>
         </nav>
-        <button className="record-btn">기록하기</button>
+        <button 
+            className="record-btn"
+            onClick={() => setActiveTab("record")}
+            >
+            기록하기
+        </button>
       </aside>
 
       {/* 메인 컨텐츠 - 활성 탭에 따라 다른 컴포넌트 렌더링 */}
