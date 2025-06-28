@@ -6,7 +6,7 @@ import logo from '../assets/dongarieum.svg';
 import searchIcon from '../assets/dotbogi.svg';
 import Modal from '../components/Modal';
 
-const API_URL = 'http://localhost:8000/';
+const API_URL = 'https://dongari-eum-backend.onrender.com/';
 
 function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
