@@ -1,7 +1,7 @@
 import '../styles/Schedule.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import TeamSelectModal from '../components/TeamSelectModal';
+import Schedule from './Schedule';
 
 const RECORD = [
   { name: '회의록', link: 'record-page/meeting-note' },
@@ -17,8 +17,9 @@ export default function RecordPage() {
   const [title, setTitle] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState(null);
+  const [showSchedule, setShowSchedule] = useState(false);
 
-  const navigate = useNavigate();
+  if (showSchedule) return <Schedule />;
 
   return (
     <div className="record-background">
@@ -28,11 +29,8 @@ export default function RecordPage() {
           <button
             className={`next-button ${select ? 'able' : ''}`}
             onClick={() => {
-              if (select) {
-                const selectedItem = RECORD.find(
-                  (item) => item.name === select
-                );
-                navigate(`/${selectedItem.link}`);
+              if (select === '일정') {
+                setShowSchedule(true);
               }
             }}
           >
