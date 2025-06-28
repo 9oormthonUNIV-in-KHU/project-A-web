@@ -1,0 +1,151 @@
+.create-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-header h2 {
+  width: 70;
+    height: 30; 
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 48px;
+  margin: 10px 25px ;
+  text-align: left;
+}
+
+.cancel-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.cancel-btn:hover {
+  color: #333;
+}
+
+.create-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin: 0 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.create-form {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 0;
+  padding: 18px 0 10px 0;
+}
+
+.name-gender-row {
+  margin-bottom: 0;
+  padding: 18px 0 10px 0;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  color: #6a6aaf;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.static-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 6px 0 0 0;
+}
+
+.field input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 15px;
+  background: transparent;
+  padding: 5px 0 4px 0;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.field input:focus {
+  outline: none;
+  border-bottom: 1.5px solid #6a6aaf;
+}
+
+.field input::placeholder {
+  color: #b0b0b0;
+  font-size: 15px;
+}
+
+.save-btn {
+  background: #e9e8ff;
+  color: #5950ff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.save-btn:hover {
+  background: #4338ca;
+}
+
+
+.edit-btn {
+  background: #f3f3fa;
+  border: none;
+  border-radius: 6px;
+  color: #4f4f4f;
+  font-size: 14px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 4px;
+}
+.edit-btn:hover {
+  background: #e0e0e0;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 20px;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background: #f87171;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+

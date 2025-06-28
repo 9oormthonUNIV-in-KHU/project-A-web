@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import "../styles/Calendar.css";
-import TeamSelectModal from "../components/TeamSelectionModal";
+import TeamSelectionModal from "../components/TeamSelectionModal";
 import MonthYearModal from "../components/MonthYearModal";
 import DateSchedulePopover from "../components/DateSchedulePopover";
 
@@ -274,7 +274,7 @@ export default function Calendar() {
           MONTHS={MONTHS}
         />
         
-        <TeamSelectModal
+        <TeamSelectionModal
           open={teamModalOpen}
           selectedTeams={selectedTeams}
           setSelectedTeams={setSelectedTeams}
