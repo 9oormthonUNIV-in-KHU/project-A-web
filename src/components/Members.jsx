@@ -1,43 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import "../styles/Members.css";
 import CreateMember from './CreateMember';
 import EditMember from './EditMember';
 
-const initialMembersData = [
-  {
-    name: "이유나",
-    gender: "여",
-    birth_date: "2001.03.07",
-    student_id: "202100738",
-    major: "경희대(의상학과)",
-    phone_number: "010-0000-0000",
-    email: "yyu307@khu.ac.kr",
-    member_year: 4,
-    role: "디자인/부원",
-    memo: "메모 내용",
-    id: 1,
-    club_id: 1
-  },
-  {
-    name: "이유나",
-    gender: "여",
-    birth_date: "2001.03.07",
-    student_id: "202100738",
-    major: "경희대(의상학과)",
-    phone_number: "010-0000-0000",
-    email: "yyu307@khu.ac.kr",
-    member_year: 4,
-    role: "디자인/부원",
-    memo: "메모 내용",
-    id: 2,
-    club_id: 1
-  }
-];
+const API_URL = 'https://dongari-eum-backend.onrender.com/';
 
 export default function Members() {
+  const { id: clubId } = useParams();
   const [showCreate, setShowCreate] = useState(false);
   const [editMember, setEditMember] = useState(null);
-  const [membersData, setMembersData] = useState(initialMembersData);
+  const [membersData, setMembersData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // 서버에서 멤버 데이터 불러오기
+  useEffect(() => {
+    async function fetchMembers() {
+      try {
+        setLoading(true);
+        const res = await axios.get(`${API_URL}clubs/${clubId}/members`);
+        setMembersData(res.data);
+      } catch (e) {
+        alert(`${e} 부원 정보를 불러오지 못했습니다.`);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchMembers();
+  }, [clubId]);
 
   // 멤버 추가
   const handleAddMember = (newMember) => {
@@ -60,6 +51,8 @@ export default function Members() {
   };
 
   // 조건부 렌더링
+  if (loading) return <div>로딩 중...</div>;
+
   if (showCreate) {
     return (
       <CreateMember 
