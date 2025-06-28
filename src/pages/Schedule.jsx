@@ -1,12 +1,19 @@
 import '../styles/RecordPage.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Schedule() {
+  const navigate = useNavigate();
   return (
     <div className="schedule-background">
       <div className="schedule-main">
         <div className="schedule-head">
           <div className="schedule-title">일정</div>
-          <button className="save-button" onClick={() => {}}>
+          <button
+            className="save-button"
+            onClick={() => {
+              navigate('/club');
+            }}
+          >
             저장
           </button>
         </div>
