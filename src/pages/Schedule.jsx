@@ -1,15 +1,26 @@
 import '../styles/RecordPage.css';
-
+import { useState } from 'react';
+import Calendar from '../components/Calendar';
 export default function Schedule() {
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  if (showCalendar) return <Calendar />;
+
   return (
     <div className="schedule-background">
       <div className="schedule-main">
         <div className="schedule-head">
           <div className="schedule-title">일정</div>
-          <button className="save-button" onClick={() => {}}>
+          <button
+            className="save-button"
+            onClick={() => {
+              setShowCalendar(true);
+            }}
+          >
             저장
           </button>
         </div>
+
         <div className="schedule-content">
           <div>
             <div className="schedule-title-input">
@@ -17,6 +28,7 @@ export default function Schedule() {
                 type="text"
                 placeholder="제목을 입력하세요."
                 value="디자인 브랜딩 회의"
+                readOnly
               />
               <div className="schedule-team-select">
                 <button className="team-design-button">디자인</button>
