@@ -41,7 +41,7 @@ function SearchPage() {
   };
 
   const onClickLogo = () => nav('/');
-  const onClickCreateClub = () => nav('/create-club');
+  // const onClickCreateClub = () => nav('/create-club');
 
   return (
     <div className="search-bg">
@@ -110,7 +110,7 @@ function SearchPage() {
             ))}
           </ul>
         )}
-        <button className="search-create-button" onClick={onClickCreateClub}>
+        <button className="search-create-button">
           새로운 동아리를 만들래요!
         </button>
       </div>
